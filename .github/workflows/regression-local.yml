@@ -17,7 +17,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
           RUN_USING_ACT: "true"
         with:
-          repo: ${{ github.event.repository.name }}
+          repo: demo-csharp
           org: "1Bira"
           features: "dependabot, code-scanning, secret-scanning"
           frequency: "daily"
