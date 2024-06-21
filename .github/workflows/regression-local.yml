@@ -12,13 +12,13 @@ jobs:
         with:
           path: ghas-metrics-report
       - name: Test Action
-        uses: ./
+        uses: ./ghas-metrics-report
         env:
           GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
           RUN_USING_ACT: "true"
         with:
           repo: ${{ github.event.repository.name }}
-          org: ${{ github.repository_owner }}
+          org: "1Bira"
           features: "dependabot, code-scanning, secret-scanning"
           frequency: "daily"
           output-format: "json, pdf, issues"
