@@ -54,7 +54,7 @@ export const AlertsMetrics = (
 
   //get Top 10 by criticality
   const openAlerts = alerts.filter((a) => a.state === "open");
-  const top10Alerts = openAlerts.sort(compareAlertSeverity).slice(0, 10);
+  const top10Alerts = openAlerts.sort(compareAlertSeverity); //.slice(0, 10);
 
   openedLastXDays = openAlerts.filter(
     (a: CodeScanningAlert | DependencyOrCodeAlert | SecretScanningAlert) => {
