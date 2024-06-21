@@ -12,13 +12,13 @@ jobs:
         with:
           path: ghas-metrics-report
       - name: Test Action
-        uses: ./ghas-metrics-report
+        uses: ./
         env:
           GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
-          RUN_USING_ACT: "true"
+          # RUN_USING_ACT: "true"
         with:
-          repo: "hm-demo"
-          org: "advanced-security-demo"
+          repo: ${{ github.event.repository.name }}
+          org: ${{ github.repository_owner }}
           features: "dependabot, code-scanning, secret-scanning"
           frequency: "daily"
           output-format: "json, pdf, issues"
