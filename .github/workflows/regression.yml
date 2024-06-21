@@ -21,7 +21,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
         with:
           repo: "ghas-metrics-report"
-          org: "theztefan"
+          org: "1Bira"
           features: "dependabot, code-scanning, secret-scanning"
           frequency: "daily"
           output-format: "json, pdf, issues"
