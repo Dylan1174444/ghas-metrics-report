@@ -15,7 +15,7 @@ jobs:
         uses: ./
         env:
           GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
-          # RUN_USING_ACT: "true"
+          RUN_USING_ACT: "true"
         with:
           repo: ${{ github.event.repository.name }}
           org: ${{ github.repository_owner }}
