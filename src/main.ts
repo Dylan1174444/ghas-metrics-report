@@ -25,7 +25,7 @@ import {
 const run = async (): Promise<void> => {
   // get inputs
   const inputs = await getInput();
-  core.debug(`[✅] Inputs parsed]`);
+  core.info(`[✅] Inputs parsed]`);
 
   const id = randomUUID();
 
