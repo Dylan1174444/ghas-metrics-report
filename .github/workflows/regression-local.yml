@@ -9,10 +9,9 @@ jobs:
     steps:
       - name: Git Checkout
         uses: actions/checkout@v4
-        with:
-          path: ghas-metrics-report
+        
       - name: Test Action
-        uses: ./ghas-metrics-report
+        uses: ./
         env:
           GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
           RUN_USING_ACT: "true"
