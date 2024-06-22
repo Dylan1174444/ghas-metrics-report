@@ -109,7 +109,8 @@ const run = async (): Promise<void> => {
 
   output.repositories.forEach((repository) => {
     if (repository.features.length === 0) return;
-
+    // debug_b
+    core.info(`[#] Summary Report Feature: ${repository.features.length}`);
     summaryReport.addHeader(
       summaryReport.addHeading(repository.owner, repository.name),
     );
