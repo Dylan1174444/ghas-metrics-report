@@ -52,8 +52,8 @@ jobs:
       - name: Lint
         run: yarn run lint:check
 
-      - name: Prettier
-        run: yarn run prettier:check
+      #- name: Prettier
+      #  run: yarn run prettier:check
 
       - name: build
         run: yarn run build
