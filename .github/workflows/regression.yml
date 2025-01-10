@@ -16,6 +16,7 @@ jobs:
           path: ghas-metrics-report
       
       - name: Test Action
+        id: report
         uses: ./ghas-metrics-report
         env:
           GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
@@ -24,13 +25,12 @@ jobs:
           org: "jcardoso13"
           features: "dependabot, code-scanning, secret-scanning"
           frequency: "daily"
-          output-format: "json, pdf, issues"
+          output-format: "json, pdf,github-output,issues"
       - name: report
         run: |
-            echo ${{env.report-json}}
-            echo ${{env.report-json}} > ./dist/report.json
+            echo ${{steps.output.report.report-json}}
       - name: upload GHAS metrics report
         uses: actions/upload-artifact@v4
         with:
           name: ghas-metrics-report
-          path: ghas-metrics-report/dist/report.json
+          path: ghas-metrics-report/report.json
