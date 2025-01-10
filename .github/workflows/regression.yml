@@ -1,4 +1,4 @@
-name: "Regression Testing with GitHub App token"
+name: "TestReport"
 on:
   push:
     branches:
@@ -28,6 +28,8 @@ jobs:
           output-format: "json, pdf,github-output,issues"
       - name: report
         run: |
+            pwd
+            ls
             echo ${{steps.output.report.report-json}}
       - name: upload GHAS metrics report
         uses: actions/upload-artifact@v4

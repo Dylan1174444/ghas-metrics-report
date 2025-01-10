@@ -1,5 +1,5 @@
 name: "GitHub Advanced Security Metrics Report"
-author: "theztefan"
+author: "jcardoso13"
 description: "A GitHub Action to generate a report of the Advanced Security Metrics for a given repository"
 inputs:
   team:
