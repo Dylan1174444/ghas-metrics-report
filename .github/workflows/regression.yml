@@ -20,8 +20,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
         with:
-          repo: "ghas-metrics-report"
-          org: "1Bira"
+          repo: "demo-csharp"
+          org: "jcardoso13"
           features: "dependabot, code-scanning, secret-scanning"
           frequency: "daily"
           output-format: "json, pdf, issues"
