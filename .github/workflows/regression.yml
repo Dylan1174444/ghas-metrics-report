@@ -25,6 +25,10 @@ jobs:
           features: "dependabot, code-scanning, secret-scanning"
           frequency: "daily"
           output-format: "json, pdf, issues"
+      - name: report
+        run: |
+            echo $report-json
+            cat $report-json > ./dist/report.json
       - name: upload GHAS metrics report
         uses: actions/upload-artifact@v4
         with:
