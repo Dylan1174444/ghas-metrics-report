@@ -27,8 +27,8 @@ jobs:
           output-format: "json, pdf, issues"
       - name: report
         run: |
-            echo $${{env.report-json}}
-            echo $${{env.report-json}} > ./dist/report.json
+            echo ${{env.report-json}}
+            echo ${{env.report-json}} > ./dist/report.json
       - name: upload GHAS metrics report
         uses: actions/upload-artifact@v4
         with:
