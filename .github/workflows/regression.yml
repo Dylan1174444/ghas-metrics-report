@@ -19,7 +19,7 @@ jobs:
         id: report
         uses: ./demo-java #ajusta para o novo path
         env:
-          GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           repo: "demo-java" #atualiza o nome do repositorio
           org: "Dylan1174444"
