@@ -24,7 +24,7 @@
     "@octokit/plugin-throttling": "5.0.1",
     "@octokit/plugin-retry": "4.1.1",
     "@vercel/ncc": "^0.36.1",
-    "jspdf": "^2.5.1",
+    "jspdf": "^2.5.2",
     "jspdf-autotable": "^3.5.31",
     "dotenv": "^16.0.3"
   },
