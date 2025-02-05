@@ -13,16 +13,16 @@ jobs:
       - name: Git Checkout
         uses: actions/checkout@v4
         with:
-          path: ghas-metrics-report
+          path: demo-java #atualiza par ao nome correto do repositorio
       
       - name: Test Action
         id: report
-        uses: ./ghas-metrics-report
+        uses: ./demo-java #ajusta para o novo path
         env:
           GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
         with:
-          repo: "demo-csharp"
-          org: "jcardoso13"
+          repo: "demo-java" #atualiza o nome do repositorio
+          org: "Dylan1174444"
           features: "dependabot, code-scanning, secret-scanning"
           frequency: "daily"
           output-format: "json, pdf,github-output,issues"
